@@ -1,0 +1,42 @@
+@import url(../vendor/normalice.css);
+@import url(../blocks/around/around.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/button__profile/button__vector/button__vector.css);
+@import url(../blocks/image/image__vector.css);
+@import url(../blocks/popup/popup.css);
+
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/element__trash/element__trash.css);
+@import url(../blocks/elements/element__text/element__text.css);
+@import url(../blocks/elements/element__image/element__image.css);
+@import url(../blocks/elements/element__group/element__group.css);
+@import url(../blocks/elements/element__button/element__button.css);
+@import url(../blocks/elements/element__button/element__button-vector.css);
+@import url(../blocks/elements/element/element.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/header__tile/header__title..css);
+@import url(../blocks/header/header__subtitle/header__subtitle.css);
+
+@import url(../blocks/forms/forms.css);
+@import url(../blocks/forms/form/form.css);
+@import url(../blocks/forms/form__button/form__button.css);
+@import url(../blocks/forms/form-container/form-container.css);
+@import url(../blocks/forms/form__heading/form__heading.css);
+@import url(../blocks/forms/form__input-container/form__input-container.css);
+@import url(../blocks/forms/form__link/form__link.css);
+@import url(../blocks/forms/form__title/form__title.css);
+@import url(../blocks/forms/form__toggle/form__toggle.css);
+
+@import url(./blocks/line/line__image/line__image.css);
+@import url(../blocks/line/line.css);
+
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/profile__button/profile__button.css);
+@import url(../blocks/profile/profile__explorador/profile__explorador.css);
+@import url(../blocks/profile/profile__image/profile__image.css);
+@import url(../blocks/profile/profile__info/profile__info.css);
+@import url(../blocks/profile/profile__jacques/profile__jacques.css);
+@import url(../pages/index.css);
+@import url(../blocks/footer/footer.css);

@@ -1,0 +1,13 @@
+.element__text {
+  color: #000000;
+  font-size: 24px;
+  background-color: white;
+  font-weight: bold;
+  height: 12px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: auto;
+  text-overflow: ellipsis;
+  margin-bottom: auto;
+  margin-right: auto;
+}

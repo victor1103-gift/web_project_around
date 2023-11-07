@@ -1,0 +1,11 @@
+.element__trash {
+  border-radius: 10px 10px;
+  display: flex;
+  align-items: start;
+}
+
+@media screen and (max-width: 320px) {
+  .element__trash {
+    width: 320px;
+  }
+}

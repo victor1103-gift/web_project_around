@@ -1,0 +1,46 @@
+.element__button-vector {
+  margin-left: -40px;
+  border-radius: 10px 10px;
+  border: none;
+  background: transparent;
+  margin-top: 10px;
+}
+.popup__close {
+  margin-left: -40px;
+  border-radius: 10px 10px;
+  border: none;
+  background: transparent;
+  margin-top: 10px;
+}
+
+.element__button-trash {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  border: none;
+}
+
+.element__button-trs {
+  border: none;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  background-image: url(../../../images/Vector.jpg);
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.element__button-trs:hover {
+  transform: scale(1.3);
+}
+
+.element__trash_active {
+  opacity: 1;
+  background-image: url(../../../images/Union.png);
+  z-index: 5;
+}

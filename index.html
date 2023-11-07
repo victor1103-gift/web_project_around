@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around The U.S.</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="around">
+        <header class="header">
+          <h1 class="header__title">Around</h1>
+          <h1 class="header__subtitle">The U.S.</h1>
+        </header>
+        <div class="line"></div>
+        <div class="profile">
+          <div class="profile__image">
+            <img
+              src="./images/image.jpg"
+              alt="image-profile"
+              class="profile__image-edit"
+            />
+          </div>
+
+          <div class="profile__info" id="profile">
+            <div class="profile__info-text" id="profile-info">
+              <p class="profile__jacques" id="jacques">Jacques Cousteau</p>
+              <p class="profile__explorador" id="explorador">Explorador</p>
+            </div>
+            <button class="profile__button" id="open" alt="boton editar perfil">
+              <img src="./images/Vector(1).png" alt="vector__two" class="" />
+            </button>
+          </div>
+          <div class="forms" id="forms">
+            <form class="form" id="form_profile">
+              <div class="form-container">
+                <h2 class="form__heading">Editar Perfil</h2>
+                <button type="button" class="form__button" id="close">
+                  <img src="./images/CloseIcon.png" alt="close" />
+                </button>
+                <fieldset class="form__input-container">
+                  <input
+                    type="text"
+                    class="form__title"
+                    placeholder="Jacques Cousteau"
+                    id="nombre"
+                  />
+                </fieldset>
+                <fieldset class="form__input-container">
+                  <input
+                    type="text"
+                    class="form__link"
+                    placeholder="Explorador"
+                    id="ocupacion"
+                  />
+                </fieldset>
+                <div class="button">
+                  <button type="submit" class="button__profile" id="guardar">
+                    Guardar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="profile__button-img">
+            <button class="profile__button-img" id="edit">
+              <img
+                src="./images/AddButton.png"
+                alt="boton"
+                class="profile__button-img"
+              />
+            </button>
+          </div>
+          <div class="forms" id="links">
+            <form class="form" id="form_place">
+              <div class="form-container">
+                <h2 class="form__heading">Nuevo Lugar</h2>
+                <button type="button" class="form__button" id="close__link">
+                  <img src="./images/CloseIcon.png" alt="close" />
+                </button>
+                <fieldset class="form__input-container">
+                  <input
+                    type="text"
+                    class="form__title"
+                    placeholder="Título"
+                    id="title_place"
+                  />
+                </fieldset>
+                <fieldset class="form__input-container">
+                  <input
+                    type="text"
+                    class="form__link"
+                    placeholder="Enlace a la imagen"
+                    id="link_place"
+                  />
+                </fieldset>
+                <div class="button">
+                  <button type="submit" class="button__profile" id="guardar">
+                    Crear
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="elements">
+          <!--
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/kirill-pershin-1088404-unsplash.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">Valle de Yosemite</p>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/lagolouis.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">Lago Louis</p>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/kirill-pershinthree-1556355-unsplash.png"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">Montañas Calvas</p>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/central-park-nueva-york.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">Central Park</p>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/el-grancañon.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="button" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">El Gran Cañon</p>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/pelicano.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <button class="element__button-trash">
+                <img src="./images/Vector.jpg" alt="button__vector" />
+              </button>
+              <p class="element__text">Islas Galapagos</p>
+            </div>
+          </div>-->
+        </div>
+        <div class="popup">
+          <div class="element__trash">
+            <img src="" alt="image-element" class="element__image-popup" />
+            <button class="element__button-vector">
+              <img src="./images/CloseIcon.png" alt="close" />
+            </button>
+          </div>
+        </div>
+        <template class="template-place">
+          <div class="element">
+            <div class="element__trash">
+              <img
+                src="./images/kirill-pershin-1088404-unsplash.jpg"
+                alt="image-element"
+                class="element__image"
+              />
+              <button class="element__button-vector">
+                <img src="./images/Group.png" alt="" />
+              </button>
+            </div>
+            <div class="element__button-trash">
+              <div alt="button__vector" class="element__button-trs"></div>
+              <p class="element__text">Valle de Yosemite</p>
+            </div>
+          </div>
+        </template>
+        <script src="./index.js"></script>
+        <footer class="footer">© 2023 Victor Alvarez</footer>
+      </div>
+    </div>
+  </body>
+</html>

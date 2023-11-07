@@ -1,0 +1,16 @@
+.element {
+  width: 282px;
+  height: 361px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .element {
+    width: 288px;
+    margin-top: 20px;
+  }
+}

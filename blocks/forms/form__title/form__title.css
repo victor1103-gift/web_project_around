@@ -1,0 +1,8 @@
+.form__title {
+  border-style: none;
+  height: 28px;
+  width: 280px;
+  border-bottom: 1px solid gray;
+  padding: 0 10px;
+  box-sizing: border-box;
+}

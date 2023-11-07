@@ -1,0 +1,12 @@
+.line {
+  width: 882px;
+  height: 1px;
+  color: white;
+  background-color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .line {
+    width: 320px;
+  }
+}

@@ -1,0 +1,17 @@
+.element__image {
+  width: 282px;
+  border-radius: 10px 10px 0px 0px;
+  height: 282px;
+  background: white;
+}
+
+.element__image-popup {
+  max-width: 433px;
+  max-height: 540px;
+}
+
+@media screen and (max-width: 767px) {
+  .element__image {
+    width: 288px;
+  }
+}

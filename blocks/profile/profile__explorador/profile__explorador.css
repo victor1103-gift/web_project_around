@@ -1,0 +1,15 @@
+.profile__explorador {
+  width: 350px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__explorador {
+    width: 288px;
+    display: flex;
+    justify-content: center;
+  }
+}

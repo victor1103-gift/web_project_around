@@ -1,0 +1,15 @@
+.form__button {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  bottom: 150px;
+  right: -200px;
+  border: none;
+}
+
+@media screen and (max-width: 320px) {
+  .form__button {
+    position: relative;
+    right: -130px;
+  }
+}
