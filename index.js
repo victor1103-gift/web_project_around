@@ -102,7 +102,7 @@ function crearPlace({ titulo, image }) {
     .querySelector(".element__image")
     .addEventListener("click", function (event) {
       popup.classList.add("popup_show");
-      popup.querySelector(".image__popup").src = event.target.src;
+      popup.querySelector(".popup__image").src = event.target.src;
     });
 
   nuevoPlace
