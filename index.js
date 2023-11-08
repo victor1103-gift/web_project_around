@@ -93,7 +93,7 @@ function crearPlace({ titulo, image }) {
   nuevoPlace.querySelector(".element__text").textContent = titulo;
 
   nuevoPlace
-    .querySelector(".element__button-vector")
+    .querySelector(".element__button--vector")
     .addEventListener("click", function () {
       nuevoPlace.remove();
     });
@@ -102,7 +102,7 @@ function crearPlace({ titulo, image }) {
     .querySelector(".element__image")
     .addEventListener("click", function (event) {
       popup.classList.add("popup_show");
-      popup.querySelector(".element__image-popup").src = event.target.src;
+      popup.querySelector(".element__image--popup").src = event.target.src;
     });
 
   nuevoPlace
@@ -115,7 +115,7 @@ function crearPlace({ titulo, image }) {
 }
 
 popup
-  .querySelector(".element__button-vector")
+  .querySelector(".element__button--vector")
   .addEventListener("click", function () {
     popup.classList.remove("popup_show");
   });
