@@ -115,7 +115,7 @@ function crearPlace({ titulo, image }) {
 }
 
 popup
-  .querySelector(".element__button--vector")
+  .querySelector(".popup__button--vector")
   .addEventListener("click", function () {
     popup.classList.remove("popup_show");
   });
