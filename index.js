@@ -102,7 +102,7 @@ function crearPlace({ titulo, image }) {
     .querySelector(".element__image")
     .addEventListener("click", function (event) {
       popup.classList.add("popup_show");
-      popup.querySelector(".element__image--popup").src = event.target.src;
+      popup.querySelector(".image__popup").src = event.target.src;
     });
 
   nuevoPlace
@@ -114,8 +114,6 @@ function crearPlace({ titulo, image }) {
   return nuevoPlace;
 }
 
-popup
-  .querySelector(".popup__button--vector")
-  .addEventListener("click", function () {
-    popup.classList.remove("popup_show");
-  });
+popup.querySelector(".popup__button").addEventListener("click", function () {
+  popup.classList.remove("popup_show");
+});
