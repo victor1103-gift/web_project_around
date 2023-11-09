@@ -2,6 +2,7 @@
   border-radius: 10px 10px;
   display: flex;
   align-items: start;
+  /* width: 280px; */
 }
 .popup__trash {
   border-radius: 10px 10px;

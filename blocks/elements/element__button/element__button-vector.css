@@ -27,6 +27,7 @@
   margin-top: 15px;
   margin-right: 10px;
   border: none;
+  text-overflow: ellipsis;
 }
 
 .element__button-trs {
