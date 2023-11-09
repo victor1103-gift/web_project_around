@@ -6,7 +6,7 @@ y experiencias.
 Estaremos en un viaje a travez del mundo desde tus ojos, comparte con nosotros tu perfil
 y  una o mas fotos del los lugares mas hermosos en los que estuviste alrededor del mundo. 
 
-Aqui un un enlace a la pagina https://victor1103-gift.github.io/web_project_4_esp/
+Aqui un un enlace a la pagina https://github.com/victor1103-gift/web_project_around
 
 De ahora en más juntos le estaremos dando nuevas funcionalidades a nuestro sitio de aventuras
 Trabajando en las nuevas funciones, le podremos dar un like a nuestras publicaciones, asi como eliminar nuestras tarjetas.
