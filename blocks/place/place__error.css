@@ -1,0 +1,31 @@
+.title_place-error {
+  position: absolute;
+  margin-top: 40px;
+  left: 75px;
+  right: auto;
+  width: 280px;
+}
+
+.link_place-error {
+  position: absolute;
+  margin-top: 40px;
+  left: 75px;
+  right: auto;
+  width: 280px;
+}
+
+.ocupacion-error {
+  position: absolute;
+  margin-top: 40px;
+  left: 75px;
+  right: auto;
+  width: 280px;
+}
+
+.nombre-error {
+  position: absolute;
+  margin-top: 40px;
+  left: 75px;
+  right: auto;
+  width: 280px;
+}

@@ -32,6 +32,7 @@
 @import url(../blocks/line/line.css);
 
 @import url(../blocks/page/page.css);
+@import url(../blocks/place/place__error.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/profile__button/profile__button.css);
