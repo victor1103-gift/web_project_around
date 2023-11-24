@@ -46,7 +46,7 @@
           </div>
 
           <div class="forms" id="forms">
-            <form class="form" id="form_profile">
+            <form class="form" id="form_profile" novalidate>
               <div class="form-container">
                 <h2 class="form__heading">Editar Perfil</h2>
                 <button type="button" class="form__button" id="close">
@@ -55,25 +55,33 @@
                 <fieldset class="form__input-container">
                   <input
                     type="text"
-                    class="form__title"
+                    class="form__input"
                     placeholder="Jacques Cousteau"
                     id="nombre"
                     value="Jacques Cousteau"
+                    required
+                    minlength="2"
+                    maxlength="40"
                   />
+                  <span class="nombre-error"></span>
                 </fieldset>
 
                 <fieldset class="form__input-container">
                   <input
                     type="text"
-                    class="form__link"
+                    class="form__input"
                     placeholder="Explorador"
                     id="ocupacion"
                     value="Explorador"
+                    required
+                    minlength="2"
+                    maxlength="200"
                   />
+                  <span class="ocupacion-error"></span>
                 </fieldset>
                 <div class="button">
                   <button
-                    type="Submit"
+                    type="submit"
                     class="button__profile"
                     id="save"
                     value="submit"
@@ -94,7 +102,7 @@
             </button>
           </div>
           <div class="forms" id="links">
-            <form class="form" id="form_place">
+            <form class="form" id="form_place" novalidate>
               <div class="form-container">
                 <h2 class="form__heading">Nuevo Lugar</h2>
                 <button type="button" class="form__button" id="close__link">
@@ -103,21 +111,34 @@
                 <fieldset class="form__input-container">
                   <input
                     type="text"
-                    class="form__title"
+                    class="form__input"
                     placeholder="Título"
                     id="title_place"
+                    required
+                    minlength="2"
+                    maxlength="40"
                   />
+                  <span class="title_place-error"></span>
                 </fieldset>
                 <fieldset class="form__input-container">
                   <input
                     type="text"
-                    class="form__link"
+                    class="form__input"
                     placeholder="Enlace a la imagen"
                     id="link_place"
+                    required
+                    minlength="2"
+                    maxlength="200"
                   />
+                  <span class="link_place-error"></span>
                 </fieldset>
                 <div class="button">
-                  <button type="submit" class="button__profile" id="guardar">
+                  <button
+                    type="submit"
+                    class="button__profile"
+                    id="save"
+                    value="submit"
+                  >
                     Crear
                   </button>
                 </div>

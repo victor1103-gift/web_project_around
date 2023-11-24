@@ -3,8 +3,8 @@ const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
 const formProfile = document.getElementById("form_profile");
 const closeButton = formProfile.querySelector(".form__button");
-const nameInput = formProfile.querySelector(".form__title");
-const jobInput = formProfile.querySelector(".form__link");
+const nameInput = formProfile.querySelector("#nombre");
+const jobInput = formProfile.querySelector("#ocupacion");
 const nameNode = profileInfo.querySelector(".profile__jacques");
 const jobNode = profileInfo.querySelector(".profile__explorador");
 const links = document.getElementById("links");
@@ -117,3 +117,92 @@ function crearPlace({ titulo, image }) {
 popup.querySelector(".popup__button").addEventListener("click", function () {
   popup.classList.remove("popup_show");
 });
+
+document.addEventListener("keydown", function (evt) {
+  console.log(evt.key);
+  if (evt.key === "Escape") {
+    links.classList.remove("show");
+    popup.classList.remove("popup_show");
+    forms.classList.remove("show");
+  }
+});
+
+document.addEventListener("click", function (evt) {
+  console.log(evt.key);
+  if (
+    evt.target.classList.contains("show") ||
+    evt.target.classList.contains("popup_show")
+  ) {
+    links.classList.remove("show");
+    popup.classList.remove("popup_show");
+    forms.classList.remove("show");
+  }
+});
+
+const showInputError = (formElement, inputElement, errorMessage) => {
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.add("form__input_type_error");
+  errorElement.textContent = errorMessage;
+  errorElement.classList.add("form__input-error_active");
+};
+
+const hideInputError = (formElement, inputElement) => {
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.remove("form__input_type_error");
+  errorElement.classList.remove("form__input-error_active");
+  errorElement.textContent = "";
+};
+
+const checkInputValidity = (formElement, inputElement) => {
+  console.log("Validez del input ->", inputElement.validity.valid);
+  if (!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, inputElement.validationMessage);
+  } else {
+    hideInputError(formElement, inputElement);
+  }
+};
+
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    return !inputElement.validity.valid;
+  });
+};
+
+const toggleButtonState = (inputList, buttonElement) => {
+  console.log("input erroneo", hasInvalidInput(inputList));
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add("button_inactive");
+  } else {
+    buttonElement.classList.remove("button_inactive");
+  }
+};
+
+const setEventListeners = (formElement) => {
+  const inputList = Array.from(formElement.querySelectorAll(".form__input"));
+  const buttonElement = formElement.querySelector(".button__profile");
+  //buttonelement es el boton que envia//
+  // aquí, para comprobar el estado del botón al principio
+  console.log("inputList ->", inputList);
+  toggleButtonState(inputList, buttonElement);
+
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", function () {
+      checkInputValidity(formElement, inputElement);
+      // y aquí, para comprobarlo cada vez que haya cambios en la entrada de algún campo
+      toggleButtonState(inputList, buttonElement);
+    });
+  });
+};
+
+const enableValidation = () => {
+  const formList = Array.from(document.querySelectorAll(".form"));
+  console.log("formList ->", formList);
+  formList.forEach((formElement) => {
+    setEventListeners(formElement);
+    formElement.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+    });
+  });
+};
+
+enableValidation();
