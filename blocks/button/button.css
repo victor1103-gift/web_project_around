@@ -12,8 +12,14 @@
   color: white;
   border: 1px solid wheat;
 }
+.span {
+  position: absolute;
+  margin-top: 40px;
+  left: 75px;
+  right: auto;
+  width: 280px;
+}
 
-span {position: absolute;margin-top: 40px;left: 75px;right: auto;width: 280px;}
 @media screen and (max-width: 767px) {
   .button__profile {
     width: 280px;
