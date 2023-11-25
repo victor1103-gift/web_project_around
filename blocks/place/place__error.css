@@ -1,4 +1,4 @@
-.title_place-error {
+.title-place-error {
   position: absolute;
   margin-top: 40px;
   left: 75px;
@@ -6,7 +6,7 @@
   width: 280px;
 }
 
-.link_place-error {
+.link-place-error {
   position: absolute;
   margin-top: 40px;
   left: 75px;
