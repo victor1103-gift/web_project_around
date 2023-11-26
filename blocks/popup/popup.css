@@ -1,7 +1,3 @@
-.element__image-popup {
-  width: 100%;
-}
-
 .popup {
   position: absolute;
   width: 100vw;
@@ -21,4 +17,8 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+}
+
+.element__image-popup {
+  width: 100%;
 }

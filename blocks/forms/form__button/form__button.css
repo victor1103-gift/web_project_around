@@ -7,6 +7,10 @@
   border: none;
 }
 
+.form__button:hover {
+  border-bottom-color: #000;
+}
+
 @media screen and (max-width: 320px) {
   .form__button {
     position: relative;

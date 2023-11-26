@@ -7,9 +7,17 @@
   margin-top: 18px;
 }
 
+.profile__button:hover {
+  border-bottom-color: #000;
+}
+
 .profile__button-img {
   background-color: #000000;
   border: none;
+}
+
+.profile__button-img:hover {
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 767px) {
