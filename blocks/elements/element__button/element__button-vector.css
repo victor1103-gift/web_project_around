@@ -5,20 +5,6 @@
   background: transparent;
   margin-top: 10px;
 }
-.popup__button {
-  margin-left: -40px;
-  border-radius: 10px 10px;
-  border: none;
-  background: transparent;
-  margin-top: 10px;
-}
-.popup__close {
-  margin-left: -40px;
-  border-radius: 10px 10px;
-  border: none;
-  background: transparent;
-  margin-top: 10px;
-}
 
 .element__button-trash {
   display: flex;
