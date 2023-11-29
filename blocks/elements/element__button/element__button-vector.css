@@ -6,6 +6,10 @@
   margin-top: 10px;
 }
 
+.element__button--vector {
+  cursor: pointer;
+}
+
 .element__button-trash {
   display: flex;
   flex-direction: row-reverse;
@@ -14,6 +18,10 @@
   margin-right: 10px;
   border: none;
   text-overflow: ellipsis;
+}
+
+.element__button-trash:hover {
+  cursor: pointer;
 }
 
 .element__button-trs {

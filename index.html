@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./fonts/inter.css" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Around The U.S.</title>
   </head>
+
   <body>
     <div class="page">
       <div class="around">
@@ -32,7 +32,7 @@
               <p class="profile__explorador" id="explorador">Explorador</p>
             </div>
             <button class="profile__button" id="open" alt="boton editar perfil">
-              <img src="./images/Vector(1).png" alt="vector__two" class="" />
+              <img src="./images/Vector(1).png" alt="editar perfil" class="" />
             </button>
           </div>
 
@@ -41,7 +41,7 @@
               <div class="form-container">
                 <h2 class="form__heading">Editar Perfil</h2>
                 <button type="button" class="form__button" id="close">
-                  <img src="./images/CloseIcon.png" alt="close" />
+                  <img src="./images/CloseIcon.png" alt="boton cerrar" />
                 </button>
                 <fieldset class="form__input-container">
                   <input
@@ -87,7 +87,7 @@
             <button class="profile__button-img" id="edit">
               <img
                 src="./images/AddButton.png"
-                alt="boton"
+                alt="boton agregar place"
                 class="profile__button-img"
               />
             </button>
@@ -97,14 +97,14 @@
               <div class="form-container">
                 <h2 class="form__heading">Nuevo Lugar</h2>
                 <button type="button" class="form__button" id="close__link">
-                  <img src="./images/CloseIcon.png" alt="close" />
+                  <img src="./images/CloseIcon.png" alt="boton de cerrar" />
                 </button>
                 <fieldset class="form__input-container">
                   <input
                     type="text"
                     class="form__input"
                     placeholder="Título"
-                    id="title_place"
+                    id="title-place"
                     required
                     minlength="2"
                     maxlength="40"
@@ -116,7 +116,7 @@
                     type="url"
                     class="form__input"
                     placeholder="Enlace a la imagen"
-                    id="link_place"
+                    id="link-place"
                     required
                     minlength="2"
                     maxlength="200"
@@ -140,7 +140,11 @@
         <div class="elements"></div>
         <div class="popup">
           <div class="popup__trash">
-            <img src="button close" alt="image-element" class="popup__image" />
+            <img
+              src="./images/CloseIcon.png"
+              alt="image-element"
+              class="popup__image"
+            />
             <button class="popup__button">
               <img src="./images/CloseIcon.png" alt="boton de cerrar" />
             </button>
@@ -155,6 +159,7 @@
                 alt="image-element"
                 class="element__image"
               />
+
               <button class="element__button--vector">
                 <img src="./images/Group.png" alt="boton eliminar" />
               </button>
@@ -170,7 +175,7 @@
         <footer class="footer">© 2023 Victor Alvarez</footer>
       </div>
     </div>
-    <script src="./index.js"></script>
-    <script src="./validate.js"></script>
+
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

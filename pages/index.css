@@ -2,7 +2,6 @@
 @import url(../fonts/inter.css);
 @import url(../blocks/around/around.css);
 @import url(../blocks/button/button.css);
-@import url(../blocks/button__profile/button__vector/button__vector.css);
 @import url(../blocks/image/image__vector.css);
 @import url(../blocks/popup/popup.css);
 
@@ -28,10 +27,6 @@
 @import url(../blocks/forms/form__link/form__link.css);
 @import url(../blocks/forms/form__title/form__title.css);
 @import url(../blocks/forms/form__toggle/form__toggle.css);
-
-@import url(./blocks/line/line__image/line__image.css);
-@import url(../blocks/line/line.css);
-
 @import url(../blocks/page/page.css);
 @import url(../blocks/place/place__error.css);
 

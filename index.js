@@ -1,3 +1,4 @@
+import { enableValidation } from "./validate";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
@@ -18,27 +19,27 @@ const linkPlace = document.querySelector("#link_place");
 const datos = [
   {
     titulo: "Valle de Yosemite",
-    image: (src = "./images/kirill-pershin-1088404-unsplash.jpg"),
+    image: "./images/kirill-pershin-1088404-unsplash.jpg",
   },
   {
     titulo: "Montañas Calvas",
-    image: (src = "./images/kirill-pershinthree-1556355-unsplash.png"),
+    image: "./images/kirill-pershinthree-1556355-unsplash.png",
   },
   {
     titulo: "Lago Louis",
-    image: (src = "./images/lagolouis.jpg"),
+    image: "./images/lagolouis.jpg",
   },
   {
     titulo: "Central Park",
-    image: (src = "./images/central-park-nueva-york.jpg"),
+    image: "./images/central-park-nueva-york.jpg",
   },
   {
     titulo: "Gran Cañon",
-    image: (src = "./images/el-grancañon.jpg"),
+    image: "./images/el-grancañon.jpg",
   },
   {
     titulo: "Islas Galapagos",
-    image: (src = "./images/pelicano.jpg"),
+    image: "./images/pelicano.jpg",
   },
 ];
 
@@ -90,6 +91,7 @@ function crearPlace({ titulo, image }) {
   const nuevoPlace = copyTemplateContent.cloneNode(true);
 
   nuevoPlace.querySelector(".element__image").src = image;
+  nuevoPlace.querySelector(".element__image").setAttribute("alt", titulo);
   nuevoPlace.querySelector(".element__text").textContent = titulo;
 
   nuevoPlace
@@ -136,3 +138,14 @@ document.addEventListener("click", function (evt) {
     forms.classList.remove("show");
   }
 });
+
+const settings = {
+  formSelector: ".form",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".button__profile",
+  inactiveButtonClass: "button_inactive",
+  inputErrorClass: "form__input-error",
+  errorClass: "form__input-error_active",
+};
+
+enableValidation(settings);

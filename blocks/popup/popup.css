@@ -14,6 +14,11 @@
   background: transparent;
   margin-top: 10px;
 }
+
+.popup__button:hover {
+  cursor: pointer;
+}
+
 .popup__close {
   margin-left: -40px;
   border-radius: 10px 10px;
