@@ -1,4 +1,4 @@
-import { enableValidation } from "./validate";
+import { enableValidation } from "./validate.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
@@ -144,7 +144,7 @@ const settings = {
   inputSelector: ".form__input",
   submitButtonSelector: ".button__profile",
   inactiveButtonClass: "button_inactive",
-  inputErrorClass: "form__input-error",
+  inputErrorClass: "form__input_type-error",
   errorClass: "form__input-error_active",
 };
 

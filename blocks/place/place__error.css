@@ -4,6 +4,7 @@
   left: 75px;
   right: auto;
   width: 280px;
+  color: red;
 }
 
 .link-place-error {
@@ -12,6 +13,7 @@
   left: 75px;
   right: auto;
   width: 280px;
+  color: red;
 }
 
 .ocupacion-error {
@@ -20,6 +22,7 @@
   left: 75px;
   right: auto;
   width: 280px;
+  color: red;
 }
 
 .nombre-error {
@@ -28,4 +31,5 @@
   left: 75px;
   right: auto;
   width: 280px;
+  color: red;
 }
