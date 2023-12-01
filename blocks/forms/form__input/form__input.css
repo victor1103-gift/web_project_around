@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.form__input:valid {
+  border-bottom: 1px solid green;
+}
+
 .form__submit {
   background-color: black;
   color: white;

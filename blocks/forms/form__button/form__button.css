@@ -5,6 +5,7 @@
   bottom: 150px;
   right: -200px;
   border: none;
+  cursor: pointer;
 }
 
 .form__button:hover {

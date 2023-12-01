@@ -14,8 +14,8 @@ const edit = document.getElementById("edit");
 const placesArea = document.querySelector(".elements");
 const popup = document.querySelector(".popup");
 const formPlace = document.querySelector("#form_place");
-const titlePlace = document.querySelector("#title_place");
-const linkPlace = document.querySelector("#link_place");
+const titlePlace = document.querySelector("#title-place");
+const linkPlace = document.querySelector("#link-place");
 const datos = [
   {
     titulo: "Valle de Yosemite",
@@ -127,7 +127,13 @@ document.addEventListener("keydown", function (evt) {
     forms.classList.remove("show");
   }
 });
-
+document.removeEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    links.classList.remove("show");
+    popup.classList.remove("popup_show");
+    forms.classList.remove("show");
+  }
+});
 document.addEventListener("click", function (evt) {
   if (
     evt.target.classList.contains("show") ||
@@ -144,8 +150,8 @@ const settings = {
   inputSelector: ".form__input",
   submitButtonSelector: ".button__profile",
   inactiveButtonClass: "button_inactive",
-  inputErrorClass: "form__input_type-error",
-  errorClass: "form__input-error_active",
+  inputErrorClass: "form__input-error_active",
+  errorClass: "form__input_type-error",
 };
 
 enableValidation(settings);
