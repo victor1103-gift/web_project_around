@@ -113,6 +113,11 @@ function crearPlace({ titulo, image }) {
       evt.target.classList.toggle("element__trash_active");
     });
 
+  document.addEventListener("keydown", function (evt) {
+    if (evt.key === "Escape") {
+      popup.classList.remove("popup_show");
+    }
+  });
   return nuevoPlace;
 }
 
@@ -120,20 +125,6 @@ popup.querySelector(".popup__button").addEventListener("click", function () {
   popup.classList.remove("popup_show");
 });
 
-document.addEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") {
-    links.classList.remove("show");
-    popup.classList.remove("popup_show");
-    forms.classList.remove("show");
-  }
-});
-document.removeEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") {
-    links.classList.remove("show");
-    popup.classList.remove("popup_show");
-    forms.classList.remove("show");
-  }
-});
 document.addEventListener("click", function (evt) {
   if (
     evt.target.classList.contains("show") ||
