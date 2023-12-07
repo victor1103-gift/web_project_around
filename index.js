@@ -120,6 +120,8 @@ popup.querySelector(".popup__button").addEventListener("click", function () {
 });
 closeEsc();
 
+/*tecla de escape*/
+
 function closeEsc() {
   document.addEventListener("keydown", function (evt) {
     if (evt.key === "Escape") {
