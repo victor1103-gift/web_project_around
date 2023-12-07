@@ -50,6 +50,7 @@ datos.forEach(function (elemento) {
 
 open.addEventListener("click", () => {
   forms.classList.add("show");
+  closeEsc();
 });
 
 closeButton.addEventListener("click", () => {
@@ -58,6 +59,7 @@ closeButton.addEventListener("click", () => {
 
 edit.addEventListener("click", () => {
   links.classList.add("show");
+  closeEsc();
 });
 
 closeLink.addEventListener("click", () => {
@@ -117,8 +119,8 @@ function crearPlace({ titulo, image }) {
 
 popup.querySelector(".popup__button").addEventListener("click", function () {
   popup.classList.remove("popup_show");
+  closeEsc();
 });
-closeEsc();
 
 /*tecla de escape*/
 
@@ -153,4 +155,3 @@ const settings = {
 };
 
 enableValidation(settings);
-closeEsc(links, popup, forms);
