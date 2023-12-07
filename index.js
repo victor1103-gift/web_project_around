@@ -112,18 +112,23 @@ function crearPlace({ titulo, image }) {
     .addEventListener("click", function (evt) {
       evt.target.classList.toggle("element__trash_active");
     });
-
-  document.addEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
-      popup.classList.remove("popup_show");
-    }
-  });
   return nuevoPlace;
 }
 
 popup.querySelector(".popup__button").addEventListener("click", function () {
   popup.classList.remove("popup_show");
 });
+closeEsc();
+
+function closeEsc() {
+  document.addEventListener("keydown", function (evt) {
+    if (evt.key === "Escape") {
+      links.classList.remove("show");
+      popup.classList.remove("popup_show");
+      forms.classList.remove("show");
+    }
+  });
+}
 
 document.addEventListener("click", function (evt) {
   if (
@@ -146,3 +151,4 @@ const settings = {
 };
 
 enableValidation(settings);
+closeEsc(links, popup, forms);
