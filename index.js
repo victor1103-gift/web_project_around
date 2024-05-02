@@ -1,3 +1,4 @@
+import Card from "./card.js";
 import { enableValidation } from "./validate.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
@@ -18,35 +19,31 @@ const titlePlace = document.querySelector("#title-place");
 const linkPlace = document.querySelector("#link-place");
 const datos = [
   {
-    titulo: "Valle de Yosemite",
-    image: "./images/kirill-pershin-1088404-unsplash.jpg",
+    name: "Valle de Yosemite",
+    link: "./images/kirill-pershin-1088404-unsplash.jpg",
   },
   {
-    titulo: "Montañas Calvas",
-    image: "./images/kirill-pershinthree-1556355-unsplash.png",
+    name: "Montañas Calvas",
+    link: "./images/kirill-pershinthree-1556355-unsplash.png",
   },
   {
-    titulo: "Lago Louis",
-    image: "./images/lagolouis.jpg",
+    name: "Lago Louis",
+    link: "./images/lagolouis.jpg",
   },
   {
-    titulo: "Central Park",
-    image: "./images/central-park-nueva-york.jpg",
+    name: "Central Park",
+    link: "./images/central-park-nueva-york.jpg",
   },
   {
-    titulo: "Gran Cañon",
-    image: "./images/el-grancañon.jpg",
+    name: "Gran Cañon",
+    link: "./images/el-grancañon.jpg",
   },
   {
-    titulo: "Islas Galapagos",
-    image: "./images/pelicano.jpg",
+    name: "Islas Galapagos",
+    link: "./images/pelicano.jpg",
   },
 ];
 
-datos.forEach(function (elemento) {
-  const nuevoLugar = crearPlace(elemento);
-  placesArea.prepend(nuevoLugar);
-});
 
 open.addEventListener("click", () => {
   forms.classList.add("show");
@@ -78,23 +75,30 @@ formPlace.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const nuevoLugar = crearPlace({
-    titulo: titlePlace.value,
-    image: linkPlace.value,
+    name: titlePlace.value,
+    link: linkPlace.value,
   });
 
   links.classList.remove("show");
   placesArea.prepend(nuevoLugar);
 });
 
+datos.forEach(function (elemento) {
+  //const nuevoLugar = crearPlace(elemento);
+  const card = new Card(elemento);
+  const nuevoLugar = Card.crearPlace();
+  placesArea.prepend(nuevoLugar);
+});
+
 /*clonar template*/
-function crearPlace({ titulo, image }) {
+function crearPlace({ name, link }) {
   const template = document.querySelector(".template-place");
   const copyTemplateContent = template.content.querySelector(".element");
   const nuevoPlace = copyTemplateContent.cloneNode(true);
 
-  nuevoPlace.querySelector(".element__image").src = image;
-  nuevoPlace.querySelector(".element__image").setAttribute("alt", titulo);
-  nuevoPlace.querySelector(".element__text").textContent = titulo;
+  nuevoPlace.querySelector(".element__image").src = link;
+  nuevoPlace.querySelector(".element__image").setAttribute("alt", name);
+  nuevoPlace.querySelector(".element__text").textContent = name;
 
   nuevoPlace
     .querySelector(".element__button--vector")
