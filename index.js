@@ -85,13 +85,15 @@ formPlace.addEventListener("submit", (event) => {
 
 datos.forEach(function (elemento) {
   //const nuevoLugar = crearPlace(elemento);
-  const card = new Card(elemento);
-  const nuevoLugar = Card.crearPlace();
+  const card = new Card(elemento.name, elemento.link, ".template-place");
+  const nuevoLugar = card._getTemplate();
   placesArea.prepend(nuevoLugar);
 });
 
+
+
 /*clonar template*/
-function crearPlace({ name, link }) {
+/*function crearPlace({ name, link }) {
   const template = document.querySelector(".template-place");
   const copyTemplateContent = template.content.querySelector(".element");
   const nuevoPlace = copyTemplateContent.cloneNode(true);
@@ -120,7 +122,9 @@ function crearPlace({ name, link }) {
     });
   return nuevoPlace;
 }
+*/
 
+//funcion cerrar popups
 popup.querySelector(".popup__button").addEventListener("click", function () {
   popup.classList.remove("popup_show");
   closeEsc();

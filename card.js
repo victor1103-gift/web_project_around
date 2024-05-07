@@ -6,7 +6,6 @@ export default class Card {
     }
 
     _getTemplate(){
-        crearPlace()
         const template = document.querySelector(this._templatePlace);
         const copyTemplateContent = template.content.querySelector(".element");
         const nuevoPlace = copyTemplateContent.cloneNode(true);
