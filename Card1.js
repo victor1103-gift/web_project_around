@@ -19,7 +19,7 @@ export default class Card {
 
     }
 
-    _setEventListeners(){
+    _setEventListeners(nuevoPlace){
         nuevoPlace
           .querySelector(".element__image")
           .addEventListener("click", function (event) {
@@ -41,7 +41,7 @@ export default class Card {
           }
           
           //eventos de mouse
-          document.addEventListener("click", function (evt) {
+          nuevoPlace.querySelector(".element__button-trs").addEventListener("click", function (evt) {
             if (
               evt.target.classList.contains("show") ||
               evt.target.classList.contains("popup_show")
@@ -53,8 +53,10 @@ export default class Card {
           });
     }
 
-    handleLike(){
+    handleLike(nuevoPlace){
         //boton de like
+        
+        this.handleLike
         nuevoPlace
           .querySelector(".element__button-trs")
           .addEventListener("click", function (evt) {
@@ -69,6 +71,10 @@ export default class Card {
           .addEventListener("click", function () {
             nuevoPlace.remove();
           });
+    }
+
+    render(){
+      
     }
 
 

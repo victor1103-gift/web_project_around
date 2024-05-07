@@ -1,4 +1,4 @@
-import Card from "./card.js";
+import Card from "./Card1.js";
 import { enableValidation } from "./validate.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
@@ -89,8 +89,6 @@ datos.forEach(function (elemento) {
   const nuevoLugar = card._getTemplate();
   placesArea.prepend(nuevoLugar);
 });
-
-
 
 /*clonar template*/
 /*function crearPlace({ name, link }) {
