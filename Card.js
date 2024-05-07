@@ -5,6 +5,7 @@ export default class Card {
         this._templatePlace = templatePlace;
     }
 
+    //template
     _getTemplate(){
         const template = document.querySelector(this._templatePlace);
         const copyTemplateContent = template.content.querySelector(".element");
