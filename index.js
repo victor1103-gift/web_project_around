@@ -1,5 +1,6 @@
 import Card from "./Card.js";
 import { enableValidation } from "./validate.js";
+import { popup } from "./utils.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
@@ -13,7 +14,6 @@ const links = document.getElementById("links");
 const closeLink = links.querySelector(".form__button");
 const edit = document.getElementById("edit");
 const placesArea = document.querySelector(".elements");
-const popup = document.querySelector(".popup");
 const formPlace = document.querySelector("#form_place");
 const titlePlace = document.querySelector("#title-place");
 const linkPlace = document.querySelector("#link-place");
@@ -86,41 +86,16 @@ formPlace.addEventListener("submit", (event) => {
 datos.forEach(function (elemento) {
   //const nuevoLugar = crearPlace(elemento);
   const card = new Card(elemento.name, elemento.link, ".template-place");
-  const nuevoLugar = card._getTemplate();
+  const nuevoLugar = card.renderCard();
   placesArea.prepend(nuevoLugar);
 });
 
 /*clonar template*/
-/*function crearPlace({ name, link }) {
-  const template = document.querySelector(".template-place");
-  const copyTemplateContent = template.content.querySelector(".element");
-  const nuevoPlace = copyTemplateContent.cloneNode(true);
-
-  nuevoPlace.querySelector(".element__image").src = link;
-  nuevoPlace.querySelector(".element__image").setAttribute("alt", name);
-  nuevoPlace.querySelector(".element__text").textContent = name;
-
-  nuevoPlace
-    .querySelector(".element__button--vector")
-    .addEventListener("click", function () {
-      nuevoPlace.remove();
-    });
-
-  nuevoPlace
-    .querySelector(".element__image")
-    .addEventListener("click", function (event) {
-      popup.classList.add("popup_show");
-      popup.querySelector(".popup__image").src = event.target.src;
-    });
-
-  nuevoPlace
-    .querySelector(".element__button-trs")
-    .addEventListener("click", function (evt) {
-      evt.target.classList.toggle("element__trash_active");
-    });
+function crearPlace({ name, link }) {
+  const card = new Card(name, link, ".template-place");
+  const nuevoPlace = card.renderCard();
   return nuevoPlace;
 }
-*/
 
 //funcion cerrar popups
 popup.querySelector(".popup__button").addEventListener("click", function () {

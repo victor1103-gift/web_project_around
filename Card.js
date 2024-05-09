@@ -1,3 +1,4 @@
+import { popup } from "./utils.js";
 export default class Card {
     constructor(name, link, templatePlace){
         this._name = name;
@@ -20,7 +21,10 @@ export default class Card {
 
     }
 
-    _setEventListeners(nuevoPlace){
+    _setEventListeners(nuevoPlace) {
+
+      this.handleRemove(nuevoPlace);
+      this.handleLike(nuevoPlace);
         nuevoPlace
           .querySelector(".element__image")
           .addEventListener("click", function (event) {
@@ -42,7 +46,7 @@ export default class Card {
           }
           
           //eventos de mouse
-          nuevoPlace.querySelector(".element__button-trs").addEventListener("click", function (evt) {
+          document.addEventListener("click", function (evt) {
             if (
               evt.target.classList.contains("show") ||
               evt.target.classList.contains("popup_show")
@@ -56,8 +60,6 @@ export default class Card {
 
     handleLike(nuevoPlace){
         //boton de like
-        
-        this.handleLike
         nuevoPlace
           .querySelector(".element__button-trs")
           .addEventListener("click", function (evt) {
@@ -65,7 +67,7 @@ export default class Card {
           });
     }
 
-    handleRemove(){
+    handleRemove(nuevoPlace){
         //remover tarjeta
         nuevoPlace
           .querySelector(".element__button--vector")
@@ -74,8 +76,11 @@ export default class Card {
           });
     }
 
-    render(){
-      
+    renderCard(){
+      const node = this._getTemplate();
+      this._setEventListeners(node);
+      return node;
+
     }
 
 

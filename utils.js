@@ -1,5 +1,1 @@
-export default class utils {
-    constructor(){
-        
-    }
-}
+export const popup = document.querySelector(".popup");

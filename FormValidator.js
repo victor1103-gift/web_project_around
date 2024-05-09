@@ -1,7 +1,10 @@
 export default class formValidator {
-/*constructor(formElement, inputElement){
+/*constructor(form, settings){
     this._formElement  = formElement;
     this._inputElement = inputElement;
+    this._errorMessage = errorMesage;
+    this._errorElement = errorElement;
+    this._settings = settings;
 }
 
 chekInput(){
