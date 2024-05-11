@@ -33,7 +33,6 @@ export default class Card {
           });
 
 
-
           //eventos de teclado
           function closeEsc() {
             document.addEventListener("keydown", function (evt) {
@@ -83,8 +82,5 @@ export default class Card {
 
     }
 
-
-    
-    
 }
 

@@ -1,6 +1,8 @@
 import Card from "./Card.js";
+import "./formValidator";
 import { enableValidation } from "./validate.js";
 import { popup } from "./utils.js";
+import FormValidator from "./formValidator.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
@@ -89,6 +91,11 @@ datos.forEach(function (elemento) {
   const nuevoLugar = card.renderCard();
   placesArea.prepend(nuevoLugar);
 });
+
+inputElement.forEach(inputElement => {
+  const element = new FormValidator(formConfig, inputElement);
+  element.enableValidation();
+})
 
 /*clonar template*/
 function crearPlace({ name, link }) {

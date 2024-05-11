@@ -1,4 +1,4 @@
-const showInputError = (formElement, inputElement, errorMessage) => {
+/*const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add("form__input_type_error");
   errorElement.textContent = errorMessage;
@@ -30,7 +30,6 @@ const hasInvalidInput = (inputList) => {
     return !inputElement.validity.valid;
   });
 };
-
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.classList.add("button_inactive");
@@ -59,4 +58,4 @@ export const enableValidation = (settings) => {
       evt.preventDefault();
     });
   });
-};
+};*/
