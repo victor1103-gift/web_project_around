@@ -1,8 +1,7 @@
 import Card from "./Card.js";
-import "./formValidator";
-import { enableValidation } from "./validate.js";
+//import { enableValidation } from "./validate.js";
 import { popup } from "./utils.js";
-import FormValidator from "./formValidator.js";
+import FormValidator from "./FormValidator.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
@@ -92,10 +91,11 @@ datos.forEach(function (elemento) {
   placesArea.prepend(nuevoLugar);
 });
 
-inputElement.forEach(inputElement => {
+
+/*inputElement.forEach(inputElement => {
   const element = new FormValidator(formConfig, inputElement);
   element.enableValidation();
-})
+})*/
 
 /*clonar template*/
 function crearPlace({ name, link }) {
@@ -142,4 +142,9 @@ const settings = {
   errorClass: "form__input_type-error",
 };
 
-enableValidation(settings);
+const formValidatorProfile = new FormValidator(settings, formProfile);
+formValidatorProfile.enableValidation();
+const formValidatorAddPlace = new FormValidator(settings, formPlace);
+formValidatorAddPlace.enableValidation();
+
+//enableValidation(settings);
