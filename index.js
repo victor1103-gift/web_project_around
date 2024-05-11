@@ -1,8 +1,6 @@
 import Card from "./Card.js";
-import "./formValidator";
-import { enableValidation } from "./validate.js";
 import { popup } from "./utils.js";
-import FormValidator from "./formValidator.js";
+import FormValidator from "./FormValidator.js";
 const open = document.getElementById("open");
 const forms = document.getElementById("forms");
 const profileInfo = document.getElementById("profile-info");
