@@ -90,10 +90,7 @@ datos.forEach(function (elemento) {
   placesArea.prepend(nuevoLugar);
 });
 
-inputElement.forEach(inputElement => {
-  const element = new FormValidator(formConfig, inputElement);
-  element.enableValidation();
-})
+
 
 /*clonar template*/
 function crearPlace({ name, link }) {
@@ -140,4 +137,8 @@ const settings = {
   errorClass: "form__input_type-error",
 };
 
-enableValidation(settings);
+const formValidatorProfile = new FormValidator(settings, formProfile);
+formValidatorProfile.enableValidation();
+
+const formValidatorAddPlace = new FormValidator(settings, formPlace);
+formValidatorAddPlace.enableValidation();

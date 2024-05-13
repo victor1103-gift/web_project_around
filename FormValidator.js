@@ -11,7 +11,6 @@ _showInputError(inputElement, errorMessage) {
 errorElement.classList.add(this._config.errorClass);
 }
 
-
 _hideInputError(inputElement) {
   const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(this._config.inputErrorClass);
