@@ -206,12 +206,6 @@ select {
  * Corrige la incapacidad de aplicar estilos a tipos sobre los que se puede hacer clic en iOS y Safari.
  */
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 
 /**
  * Elimina el borde interior y el relleno en Firefox.
@@ -309,12 +303,7 @@ textarea {
  * 2. Corrige el estilo de contorno en Safari.
  */
 
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
+
 
 /**
  * Elimina el relleno interior en Chrome y Safari, en macOS.
