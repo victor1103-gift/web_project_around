@@ -9,27 +9,41 @@ import { popup, open, forms, profileInfo, formProfile,
   links, closeLink, edit, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
 
-
-
-/*open.addEventListener("click", () => {
-  forms.classList.add("show");
-  closeEsc();
-});*/
-//open.setEventListeners();
-
-
-/*closeButton.addEventListener("click", () => {
-  forms.classList.remove("show");
-});*/
-
-/*edit.addEventListener("click", () => {
-  links.classList.add("show");
-  closeEsc();
+const instanciaPopup = new Popup("#forms");
+const instanciaPopupEdit = new Popup("#links");
+const instanciaCloseEsc = new Popup("")
+/*const _handleEscClose = popup.addEventListener("click", function (evt) {
+  if (
+    evt.target.classList.contains("show") ||
+    evt.target.classList.contains("popup_show")
+  ) {
+    links.classList.remove("show");
+    popup.classList.remove("popup_show");
+    forms.classList.remove("show");
+  }
+  _handleEscClose();
 });*/
 
-/*closeLink.addEventListener("click", () => {
-  links.classList.remove("show");
-});*/
+open.addEventListener("click", () => {
+  instanciaPopup.open();
+});
+
+edit.addEventListener("click", () => {
+  instanciaPopupEdit.open();
+});
+
+closeButton.addEventListener("click", () => {
+  instanciaPopup.close();
+});
+
+closeLink.addEventListener("click", () => {
+  instanciaPopupEdit.close();
+});
+
+closeButton.addEventListener("click", () => {
+  instanciaPopup._handleEscClose();
+});
+
 
 formProfile.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -85,15 +99,7 @@ function crearPlace({ name, link }) {
 
 /*tecla de escape*/
 
-/*function closeEsc() {
-  document.addEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
-      links.classList.remove("show");
-      popup.classList.remove("popup_show");
-      forms.classList.remove("show");
-    }
-  });
-}*/
+
 
 /*document.addEventListener("click", function (evt) {
   if (
