@@ -11,8 +11,14 @@ import { popup, open, forms, profileInfo, formProfile,
 
 const instanciaPopup = new Popup("#forms");
 const instanciaPopupEdit = new Popup("#links");
-const instanciaCloseEsc = new Popup("")
-/*const _handleEscClose = popup.addEventListener("click", function (evt) {
+
+//funcion cerrar popups
+/*popup.querySelector(".popup__button").addEventListener("click", function () {
+  popup.classList.remove("popup_show");
+  closeEsc();
+});*/
+
+/*document.addEventListener("click", function (evt) {
   if (
     evt.target.classList.contains("show") ||
     evt.target.classList.contains("popup_show")
@@ -21,7 +27,6 @@ const instanciaCloseEsc = new Popup("")
     popup.classList.remove("popup_show");
     forms.classList.remove("show");
   }
-  _handleEscClose();
 });*/
 
 open.addEventListener("click", () => {
@@ -65,13 +70,6 @@ formPlace.addEventListener("submit", (event) => {
   placesArea.prepend(nuevoLugar);
 });
 
-/*datos.forEach(function (elemento) {
-  const card = new Card(elemento.name, elemento.link, ".template-place");
-  const nuevoLugar = card.renderCard();
-  placesArea.prepend(nuevoLugar);
-});
-*/
-
 const section = new Section(
   {
   items: datos, renderer: (elemento) =>{
@@ -83,34 +81,12 @@ const section = new Section(
 );
 section.renderer();
 
-
 /*clonar template*/
 function crearPlace({ name, link }) {
   const card = new Card(name, link, ".template-place");
   const nuevoPlace = card.renderCard();
   return nuevoPlace;
 }
-
-//funcion cerrar popups
-/*popup.querySelector(".popup__button").addEventListener("click", function () {
-  popup.classList.remove("popup_show");
-  closeEsc();
-});*/
-
-/*tecla de escape*/
-
-
-
-/*document.addEventListener("click", function (evt) {
-  if (
-    evt.target.classList.contains("show") ||
-    evt.target.classList.contains("popup_show")
-  ) {
-    links.classList.remove("show");
-    popup.classList.remove("popup_show");
-    forms.classList.remove("show");
-  }
-});*/
 
 const settings = {
   formSelector: ".form",
