@@ -18,17 +18,6 @@ const instanciaPopupEdit = new Popup("#links");
   closeEsc();
 });*/
 
-/*document.addEventListener("click", function (evt) {
-  if (
-    evt.target.classList.contains("show") ||
-    evt.target.classList.contains("popup_show")
-  ) {
-    links.classList.remove("show");
-    popup.classList.remove("popup_show");
-    forms.classList.remove("show");
-  }
-});*/
-
 open.addEventListener("click", () => {
   instanciaPopup.open();
 });

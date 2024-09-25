@@ -1,20 +1,36 @@
 export default class Popup{
     constructor (popup){
-        this._popup = popup;
+        this._popupElement = document.querySelector(popup);
+        this._handleEscClose = this._handleEscClose.bind(this);
+
     }
 
     open() {
-      const popup = document.querySelector(this._popup)
-      popup.classList.add("show");
+      this._popupElement.classList.add("show");
+      document.addEventListener("click",  
+        this._handleEscClose);
     }
 
     close() {
-      const popup = document.querySelector(this._popup)
-      popup.classList.remove("show");
+      this._popupElement.classList.remove("show");
+
     }
 
-    _handleEscClose(){
-      const closeEsc = document.querySelector(this._popup)
-      closeEsc.classList.remove("show", "popup_show");
+    _handleEscClose(evt){
+
+     
+    }
+
+    _setEventListeners () {
+      if (
+        evt.target.classList.contains("show") ||
+        evt.target.classList.contains("popup_show")
+      ) {
+        this.close()
+      }
+
+      this._popupElement.querySelector(".form__button").addEventListener("click",  ()=>{
+        this.close();
+      })
     }
     }
