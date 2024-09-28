@@ -9,8 +9,8 @@ import { popup, open, forms, profileInfo, formProfile,
   links, closeLink, edit, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
 
-const instanciaPopup = new Popup("#forms");
-const instanciaPopupEdit = new Popup("#links");
+const profilePopup = new Popup("#forms");
+const popupEdit = new Popup("#links");
 
 //funcion cerrar popups
 /*popup.querySelector(".popup__button").addEventListener("click", function () {
@@ -19,23 +19,23 @@ const instanciaPopupEdit = new Popup("#links");
 });*/
 
 open.addEventListener("click", () => {
-  instanciaPopup.open();
+  profilePopup.open();
 });
 
 edit.addEventListener("click", () => {
-  instanciaPopupEdit.open();
+  popupEdit.open();
 });
 
 closeButton.addEventListener("click", () => {
-  instanciaPopup.close();
+  profilePopup.close();
 });
 
 closeLink.addEventListener("click", () => {
-  instanciaPopupEdit.close();
+  popupEdit.close();
 });
 
 closeButton.addEventListener("click", () => {
-  instanciaPopup._handleEscClose();
+  profilePopup._handleEscClose();
 });
 
 

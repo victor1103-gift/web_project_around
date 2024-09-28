@@ -1,24 +1,25 @@
 export default class Popup{
     constructor (popup){
         this._popupElement = document.querySelector(popup);
+        this._closeButton = this._popupElement.querySelector("#close");
         this._handleEscClose = this._handleEscClose.bind(this);
 
     }
 
     open() {
       this._popupElement.classList.add("show");
-      document.addEventListener("click",  
-        this._handleEscClose);
+      document.addEventListener("keydown", this._handleEscClose)
     }
 
     close() {
       this._popupElement.classList.remove("show");
-
+      document.removeEventListener("keydown", this._handleEscClose)
     }
 
     _handleEscClose(evt){
-
-     
+      if (evt.key === "Escape"){
+        this.close();
+      }
     }
 
     _setEventListeners () {
