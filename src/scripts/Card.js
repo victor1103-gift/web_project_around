@@ -1,9 +1,10 @@
 import { popup } from "./utils.js";
 export default class Card {
-    constructor(name, link, templatePlace){
+    constructor(name, link, templatePlace, handleClickImage){
         this._name = name;
         this._link = link;
         this._templatePlace = templatePlace;
+        this._handleClickImage = handleClickImage;
     }
 
     //template
@@ -22,7 +23,6 @@ export default class Card {
     }
 
     _setEventListeners(nuevoPlace) {
-
       this.handleRemove(nuevoPlace);
       this.handleLike(nuevoPlace);
         nuevoPlace
@@ -31,18 +31,6 @@ export default class Card {
             popup.classList.add("popup_show");
             popup.querySelector(".popup__image").src = event.target.src;
           });
-
-
-          //eventos de teclado
-          function closeEsc() {
-            document.addEventListener("keydown", function (evt) {
-              if (evt.key === "Escape") {
-                links.classList.remove("show");
-                popup.classList.remove("popup_show");
-                forms.classList.remove("show");
-              }
-            });
-          }
           
           //eventos de mouse
           document.addEventListener("click", function (evt) {

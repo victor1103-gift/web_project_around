@@ -8,11 +8,11 @@
 }
 
 .popup__button {
-  margin-left: -40px;
   border-radius: 10px 10px;
   border: none;
   background: transparent;
-  margin-top: 10px;
+  position: relative;
+  bottom: 50px;
 }
 
 .popup__button:hover {
