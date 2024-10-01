@@ -9,7 +9,6 @@ import { popup, openEditButton, forms, formProfile,
   links, closeLink, editPlaceButton, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
 
-
 const popupProfile = new PopupWithForm("#forms");
 const popupEdit = new PopupWithForm("#links");
 const popupImage = new PopupWithImage("#popup-cards");
@@ -80,7 +79,6 @@ function crearPlace({ name, link }) {
   //const nuevoPlace = card.renderCard();
  //return nuevoPlace;
 //})
-
 const settings = {
   formSelector: ".form",
   inputSelector: ".form__input",
