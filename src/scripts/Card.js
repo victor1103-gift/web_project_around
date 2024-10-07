@@ -25,23 +25,12 @@ export default class Card {
     _setEventListeners(nuevoPlace) {
       this.handleRemove(nuevoPlace);
       this.handleLike(nuevoPlace);
+      this._handleClickImage(nuevoPlace);
         nuevoPlace
           .querySelector(".element__image")
           .addEventListener("click", function (event) {
             popup.classList.add("popup_show");
             popup.querySelector(".popup__image").src = event.target.src;
-          });
-          
-          //eventos de mouse
-          document.addEventListener("click", function (evt) {
-            if (
-              evt.target.classList.contains("show") ||
-              evt.target.classList.contains("popup_show")
-            ) {
-              links.classList.remove("show");
-              popup.classList.remove("popup_show");
-              forms.classList.remove("show");
-            }
           });
     }
 

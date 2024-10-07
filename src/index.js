@@ -68,10 +68,16 @@ section.renderer();
 
 /*clonar template*/
 function crearPlace({ name, link }) {
-  const card = new Card(name, link, ".template-place",);
+  const card = new Card(name, link, ".template-place",openPopup);
   const nuevoPlace = card.renderCard();
   return nuevoPlace;
 }
+
+function openPopup(){
+  popupImage = new PopupWithImage();
+  popupImage.open()
+}
+
 //datos.forEach(function(name, link){
   //const card = new Card(name, link, ()=>{
     //popupImage.open(name, link)
