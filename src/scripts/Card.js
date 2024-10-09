@@ -25,7 +25,6 @@ export default class Card {
     _setEventListeners(nuevoPlace) {
       this.handleRemove(nuevoPlace);
       this.handleLike(nuevoPlace);
-      this._handleClickImage(nuevoPlace);
         nuevoPlace
           .querySelector(".element__image")
           .addEventListener("click", function (event) {

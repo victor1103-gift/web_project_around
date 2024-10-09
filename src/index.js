@@ -9,7 +9,6 @@ import { popup, openEditButton, forms, formProfile,
   links, closeLink, editPlaceButton, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
 
-<<<<<<< HEAD
 const popupProfile = new PopupWithForm("#forms");
 const popupEdit = new PopupWithForm("#links");
 const popupImage = new PopupWithImage("#popup-cards");
@@ -21,45 +20,18 @@ openEditButton.addEventListener("click", () => {
 });
 
 editPlaceButton.addEventListener("click", () => {
-=======
-const profilePopup = new Popup("#forms");
-const popupEdit = new Popup("#links");
-
-//funcion cerrar popups
-/*popup.querySelector(".popup__button").addEventListener("click", function () {
-  popup.classList.remove("popup_show");
-  closeEsc();
-});*/
-
-open.addEventListener("click", () => {
-  profilePopup.open();
-});
-
-edit.addEventListener("click", () => {
->>>>>>> 3623b23b4c81dab43d080b9a496a8077c216d109
   popupEdit.open();
 });
 
 closeButton.addEventListener("click", () => {
-<<<<<<< HEAD
   popupProfile.close();
 });
 closeButtonPopup.addEventListener("click", () => {
   popupImage.close();
-=======
-  profilePopup.close();
->>>>>>> 3623b23b4c81dab43d080b9a496a8077c216d109
 });
 
 closeLink.addEventListener("click", () => {
   popupEdit.close();
-<<<<<<< HEAD
-=======
-});
-
-closeButton.addEventListener("click", () => {
-  profilePopup._handleEscClose();
->>>>>>> 3623b23b4c81dab43d080b9a496a8077c216d109
 });
 
 
@@ -103,7 +75,7 @@ function crearPlace({ name, link }) {
 
 function openPopup(){
   popupImage = new PopupWithImage();
-  popupImage.open()
+  popupImage.open(this.name, this.link)
 }
 
 //datos.forEach(function(name, link){
