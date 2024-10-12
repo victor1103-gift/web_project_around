@@ -10,9 +10,6 @@
 
 .element__button-trash {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-top: -30px;
   border: none;
   text-overflow: ellipsis;
 }

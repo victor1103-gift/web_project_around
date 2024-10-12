@@ -1,10 +1,10 @@
 import { popup } from "./utils.js";
 export default class Card {
-    constructor(name, link, templatePlace, handleClickImage){
+    constructor(name, link, templatePlace){
         this._name = name;
         this._link = link;
         this._templatePlace = templatePlace;
-        this._handleClickImage = handleClickImage;
+        
     }
 
     //template
@@ -16,7 +16,6 @@ export default class Card {
         nuevoPlace.querySelector(".element__image").src = this._link;
         nuevoPlace.querySelector(".element__image").alt = "Imagen de" + this._name;
         nuevoPlace.querySelector(".element__text").textContent = this._name;
-      
 
         return nuevoPlace;
 
@@ -25,11 +24,13 @@ export default class Card {
     _setEventListeners(nuevoPlace) {
       this.handleRemove(nuevoPlace);
       this.handleLike(nuevoPlace);
-        nuevoPlace
-          .querySelector(".element__image")
-          .addEventListener("click", function (event) {
+      nuevoPlace.querySelector(".element__image").addEventListener("click", function (event) {
             popup.classList.add("popup_show");
             popup.querySelector(".popup__image").src = event.target.src;
+          });
+          nuevoPlace.querySelector(".element__text").addEventListener("click", function (event) {
+            popup.classList.add("popup_show");
+            popup.querySelector(".popup__text").textContent = event.target.textContent;
           });
     }
 
@@ -51,7 +52,8 @@ export default class Card {
           });
     }
 
-    renderCard(){
+    renderCard(handleClickImage){
+      this._handleClickImage = handleClickImage;
       const node = this._getTemplate();
       this._setEventListeners(node);
       return node;

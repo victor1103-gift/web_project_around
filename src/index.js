@@ -8,28 +8,22 @@ import { popup, openEditButton, forms, formProfile,
   closeButton,closeButtonPopup, nameInput, jobInput, nameNode, jobNode, 
   links, closeLink, editPlaceButton, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
-
+const popupImage = new PopupWithImage("#popup-cards")
 const popupProfile = new PopupWithForm("#forms");
 const popupEdit = new PopupWithForm("#links");
-const popupImage = new PopupWithImage("#popup-cards");
-console.log(popupImage);
-console.log(popupProfile);
-console.log(popupEdit);
+
 openEditButton.addEventListener("click", () => {
   popupProfile.open();
 });
-
 editPlaceButton.addEventListener("click", () => {
   popupEdit.open();
 });
-
 closeButton.addEventListener("click", () => {
   popupProfile.close();
 });
 closeButtonPopup.addEventListener("click", () => {
   popupImage.close();
 });
-
 closeLink.addEventListener("click", () => {
   popupEdit.close();
 });
@@ -37,7 +31,6 @@ closeLink.addEventListener("click", () => {
 
 formProfile.addEventListener("submit", (event) => {
   event.preventDefault();
-
   nameNode.textContent = nameInput.value;
   jobNode.textContent = jobInput.value;
   forms.classList.remove("show");
@@ -68,23 +61,11 @@ section.renderer();
 
 /*clonar template*/
 function crearPlace({ name, link }) {
-  const card = new Card(name, link, ".template-place",openPopup);
-  const nuevoPlace = card.renderCard();
+  const card = new Card(name, link, ".template-place")
+  const nuevoPlace = card.renderCard()
   return nuevoPlace;
 }
 
-function openPopup(){
-  popupImage = new PopupWithImage();
-  popupImage.open(this.name, this.link)
-}
-
-//datos.forEach(function(name, link){
-  //const card = new Card(name, link, ()=>{
-    //popupImage.open(name, link)
-  //});
-  //const nuevoPlace = card.renderCard();
- //return nuevoPlace;
-//})
 const settings = {
   formSelector: ".form",
   inputSelector: ".form__input",
