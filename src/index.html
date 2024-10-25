@@ -23,7 +23,6 @@
               class="profile__image-edit"
             />
           </div>
-
           <div class="profile__info" id="profile">
             <div class="profile__info-text" id="profile-info">
               <p class="profile__jacques" id="jacques">Jacques Cousteau</p>
@@ -33,8 +32,18 @@
               <img src="<%=require('./images/Vector(1).png') %>" alt="editar perfil" class="" />
             </button>
           </div>
-
-          <div class="forms" id="forms">
+          <div class="profile__button-img">
+            <button class="profile__button-img" id="edit">
+              <img
+                src="<%=require('./images/AddButton.png') %>"
+                alt="boton agregar place"
+                class="profile__button-img"
+              />
+            </button>
+          </div>
+        </div>
+          <div class="forms" >
+          <div class="popup" id="forms">
             <form class="form" id="form_profile" novalidate>
               <div class="form-container">
                 <h2 class="form__heading">Editar Perfil</h2>
@@ -81,16 +90,10 @@
               </div>
             </form>
           </div>
-          <div class="profile__button-img">
-            <button class="profile__button-img" id="edit">
-              <img
-                src="<%=require('./images/AddButton.png') %>"
-                alt="boton agregar place"
-                class="profile__button-img"
-              />
-            </button>
           </div>
-          <div class="forms" id="links">
+          
+          <div class="forms">
+            <div class="popup" id="links">
             <form class="form" id="form_place" novalidate>
               <div class="form-container">
                 <h2 class="form__heading">Nuevo Lugar</h2>
@@ -134,22 +137,24 @@
               </div>
             </form>
           </div>
-        </div>
-        <div class="elements"></div>
-        <div class="popup" id="popup-cards">
-          <div class="popup__trash">
-            <img
-            src="<%=require('./images/kirill-pershin-1088404-unsplash.jpg') %>"
-            alt="image-element"
-            class="popup__image"
-          />
-          <p class="popup__text element__text">Valle de Yosemite</p>
-            <button class="popup__button" id="close">
-              <img src="<%=require('./images/CloseIcon.png') %>" alt="boton de cerrar" />
-            </button>
           </div>
-        </div>
-
+            <div class="popup" id="popup-cards">
+              <div class="popup__trash">
+                <img
+                src="<%=require('./images/kirill-pershin-1088404-unsplash.jpg') %>"
+                alt="image-element"
+                class="popup__image"
+              />
+              <p class="popup__text">Valle de Yosemite</p>
+                <button class="popup__button" id="close">
+                  <img src="<%=require('./images/CloseIcon.png') %>" alt="boton de cerrar" />
+                </button>
+              </div>
+            </div>
+          
+        <div class="elements"></div>
+      </div>
+    </div>
         <template class="template-place">
           <div class="element">
             <div class="element__trash">
@@ -169,9 +174,8 @@
             </div>
           </div>
         </template>
-
         <footer class="footer">© 2023 Victor Alvarez</footer>
-      </div>
-    </div>
+      
+    
   </body>
 </html>

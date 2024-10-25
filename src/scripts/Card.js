@@ -1,37 +1,32 @@
 import { popup } from "./utils.js";
 export default class Card {
-    constructor(name, link, templatePlace){
+    constructor(name, link, templatePlace, handleClickImage){
         this._name = name;
         this._link = link;
         this._templatePlace = templatePlace;
-        
+        this._handleClickImage = handleClickImage;
     }
 
     //template
     _getTemplate(){
         const template = document.querySelector(this._templatePlace);
         const copyTemplateContent = template.content.querySelector(".element");
-        const nuevoPlace = copyTemplateContent.cloneNode(true);
-        
-        nuevoPlace.querySelector(".element__image").src = this._link;
-        nuevoPlace.querySelector(".element__image").alt = "Imagen de" + this._name;
-        nuevoPlace.querySelector(".element__text").textContent = this._name;
-
-        return nuevoPlace;
+        this.nuevoPlace = copyTemplateContent.cloneNode(true);
+        this.imageCard = this.nuevoPlace.querySelector(".element__image");
+        this.cardTitle = this.nuevoPlace.querySelector(".element__text");
+        this.imageCard.src = this._link;
+        this.imageCard.alt = "Imagen de" + this._name;
+        this.cardTitle.textContent = this._name;
+        return this.nuevoPlace;
 
     }
 
     _setEventListeners(nuevoPlace) {
       this.handleRemove(nuevoPlace);
       this.handleLike(nuevoPlace);
-      nuevoPlace.querySelector(".element__image").addEventListener("click", function (event) {
-            popup.classList.add("popup_show");
-            popup.querySelector(".popup__image").src = event.target.src;
-          });
-          nuevoPlace.querySelector(".element__text").addEventListener("click", function (event) {
-            popup.classList.add("popup_show");
-            popup.querySelector(".popup__text").textContent = event.target.textContent;
-          });
+      this.imageCard.addEventListener("click", ()=>{
+        this._handleClickImage();
+      })
     }
 
     handleLike(nuevoPlace){
@@ -52,12 +47,10 @@ export default class Card {
           });
     }
 
-    renderCard(handleClickImage){
-      this._handleClickImage = handleClickImage;
+    renderCard(){
       const node = this._getTemplate();
       this._setEventListeners(node);
-      return node;
-
+      return this.nuevoPlace;
     }
 
 }

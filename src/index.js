@@ -11,7 +11,6 @@ import { popup, openEditButton, forms, formProfile,
 const popupImage = new PopupWithImage("#popup-cards")
 const popupProfile = new PopupWithForm("#forms");
 const popupEdit = new PopupWithForm("#links");
-
 openEditButton.addEventListener("click", () => {
   popupProfile.open();
 });
@@ -28,24 +27,11 @@ closeLink.addEventListener("click", () => {
   popupEdit.close();
 });
 
-
 formProfile.addEventListener("submit", (event) => {
   event.preventDefault();
   nameNode.textContent = nameInput.value;
   jobNode.textContent = jobInput.value;
   forms.classList.remove("show");
-});
-
-formPlace.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const nuevoLugar = crearPlace({
-    name: titlePlace.value,
-    link: linkPlace.value,
-  });
-
-  links.classList.remove("show");
-  placesArea.prepend(nuevoLugar);
 });
 
 const section = new Section(
@@ -61,7 +47,9 @@ section.renderer();
 
 /*clonar template*/
 function crearPlace({ name, link }) {
-  const card = new Card(name, link, ".template-place")
+  const card = new Card(name, link, ".template-place", ()=>{
+    popupImage.open(name, link);
+  })
   const nuevoPlace = card.renderCard()
   return nuevoPlace;
 }
