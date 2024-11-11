@@ -1,16 +1,15 @@
 export const popup = document.querySelector(".popup");
-export const closeButtonPopup = document.querySelector(".popup__button");
+
 export const openEditButton = document.getElementById("open");
 export const forms = document.getElementById("forms");
 export const profileInfo = document.getElementById("profile-info"); 
 export const formProfile = document.getElementById("form_profile");
-export const closeButton = formProfile.querySelector(".form__button");
+export const closeButton = document.querySelector("#close");
 export const nameInput = formProfile.querySelector("#nombre");
 export const jobInput = formProfile.querySelector("#ocupacion");
 export const nameNode = profileInfo.querySelector(".profile__jacques");
 export const jobNode = profileInfo.querySelector(".profile__explorador");
 export const links = document.getElementById("links");
-export const closeLink = links.querySelector(".form__button");
 export const editPlaceButton = document.getElementById("edit");
 export const placesArea = document.querySelector(".elements");
 export const formPlace = document.querySelector("#form_place");
