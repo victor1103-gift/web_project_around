@@ -3,9 +3,9 @@ import Popup from './scripts/popup/Popup.js';
 import Card from "./scripts/Card.js";
 import FormValidator from "./scripts/FormValidator.js";
 import Section from "./scripts/Section.js";
-import { openEditButton, forms, formProfile,  
+import { openPopupEdit, forms, formProfile,  
   closeButton, nameInput, jobInput, nameNode, jobNode, 
-  links, editPlaceButton, placesArea, formPlace, 
+  links, openPopup, placesArea, formPlace, 
   titlePlace, linkPlace, datos } from './scripts/utils.js';
 
 const popupProfile = new Popup("#forms");
@@ -19,21 +19,15 @@ popupEdit.setEventListeners();
 const popupImage = new Popup("#popup-cards");
 console.log(popupImage);
 
-editPlaceButton.addEventListener("click", () => {
+openPopupEdit.addEventListener("click", () => {
   popupEdit.open()
 })
 
-openEditButton.addEventListener("click", () => {
+openPopup.addEventListener("click", () => {
   popupProfile.open()
 })
 
 
-closeButton.addEventListener("click", () =>{
-  popupProfile.close();
-})
-closeButton.addEventListener("click", () =>{
-  popupEdit.close();
-})
 
 
 formPlace.addEventListener("submit", (event) => {
